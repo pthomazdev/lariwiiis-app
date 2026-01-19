@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../images/background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    padding-top: 45px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    width: 350px;
+    max-width: 90%;
+    height: auto;
+}
+
+main.home {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #596a8a;
+    text-align: center;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.btn-play {
+    width: 250px;
+    height: auto;
+}
+
+.btn-ranking {
+    width: 200px;
+    height: auto;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    opacity: 0.8;
+    color: #596a8a;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.counter p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #596a8a;
+}
+
+#contador {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #596a8a;
+    line-height: 1;
+}
+
+.game-controls {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.btn-reset, .btn-back {
+    width: 120px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn-reset,
+.btn-back:hover {
+    transform: scale(1.1);
+}
+
+img[alt^="button-"], #btn-reset {
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+img[alt^="button-"]:active, #btn-reset:active {
+    transform: scale(0.95);
+}
+
+/* Ajustes para Celulares */
+@media (max-width: 480px) {
+    header {
+        padding-top: 20px; /* Reduz o espaço no topo */
+    }
+
+    .logo {
+        width: 250px; /* Logo menor em telas pequenas */
+    }
+
+    .home p {
+        font-size: 1rem; /* Diminui o texto para não quebrar muitas linhas */
+        padding: 0 20px; /* Evita que o texto encoste nas bordas */
+    }
+
+    .btn-play {
+        width: 200px; /* Botões menores */
+    }
+
+    .btn-ranking {
+        width: 160px;
+    }
+
+    #contador {
+        font-size: 2.5rem; /* Ajusta o tamanho do contador */
+    }
+
+    .game-controls {
+        flex-direction: row; /* Mantém os botões lado a lado ou mude para column se preferir */
+        gap: 10px;
+    }
+
+    .btn-reset, .btn-back {
+        width: 100px;
+    }
+}
